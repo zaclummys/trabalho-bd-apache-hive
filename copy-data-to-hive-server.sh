@@ -12,9 +12,7 @@ data=(
     "neighborhood"
 )
 
-for file in "${data[@]}"; do
-    docker cp data/$file.csv hive-hive-server-1:/tmp/
-done
+docker cp data/. hive-hive-server-1:/tmp/data/
 
 for table in "${data[@]}"; do
     docker exec -it hive-hive-server-1 bash -c "beeline -u jdbc:hive2://localhost:10000 -e \"LOAD DATA LOCAL INPATH '/tmp/$table.csv' INTO TABLE $table;\""
