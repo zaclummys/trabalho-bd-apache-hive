@@ -5,31 +5,27 @@ cd "$(dirname "$0")"
 
 tables=(
     "crime"
-    "segment"
-    "vertice"
-    "time"
-    "district"
-    "neighborhood"
+    # "segment"
+    # "vertice"
+    # "district"
+    # "time"
+    # "neighborhood"
 )
 
 filenames=(
     "crime.csv"
-    "segment.csv"
-    "vertice.csv"
-    "time.csv"
-    "district.csv"
-    "neighborhood.csv"
+    # "segment.csv"
+    # "vertice.csv"
+    # "time.csv"
+    # "district.csv"
+    # "neighborhood.csv"
 )
 
-docker cp data/. hive-hive-server-1:/tmp/data/
+docker cp data/. hive:/tmp/data/
 
 for i in "${!tables[@]}"; do
     table="${tables[$i]}"
     filename="${filenames[$i]}"
-
-    docker exec -it hive-hive-server-1 bash -c "beeline -u jdbc:hive2://localhost:10000 -e \"LOAD DATA LOCAL INPATH '/tmp/$filename' INTO TABLE $table;\""
-done
-
-for table in "${table[@]}"; do
-    docker exec -it hive-hive-server-1 bash -c "beeline -u jdbc:hive2://localhost:10000 -e \"SELECT COUNT(*) as $table FROM $table;\""
+    query="LOAD DATA LOCAL INPATH \"/tmp/data/$filename\" INTO TABLE \`$table\`;"
+    docker exec -it hive bash -c "beeline -u jdbc:hive2://localhost:10000 -e '$query'"
 done

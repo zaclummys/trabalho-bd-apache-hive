@@ -23,15 +23,12 @@ filenames=(
     "vertice.csv"
 )
 
-# check if the data directory exists, if not create it
 mkdir -p ./data
 
-# check if the files already exist, if not download them
 for i in "${!urls[@]}"; do
     url="${urls[$i]}"
     filename="${filenames[$i]}"
     
-    # check if the file already exists
     if [ ! -f "./data/$filename" ]; then
         wget "$url" -O "./data/$filename"
     else

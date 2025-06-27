@@ -1,43 +1,70 @@
-CREATE TABLE crime (
-  segment_id STRING,
-  time_id STRING,
-  crime_type STRING,
-  count INT
+CREATE TABLE IF NOT EXISTS crime (
+  id INT,
+  total_feminicide INT,
+  total_homicide INT,
+  total_felony_murder INT,
+  total_bodily_harm INT, 
+  total_theft_cellphone INT,
+  total_armed_robbery_cellphone INT, 
+  total_theft_auto INT, 
+  total_armed_robbery_auto INT, 
+  segment_id INT,
+  time_id INT
 )
-ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';'
+STORED AS TEXTFILE;
 
-CREATE TABLE segment (
-  segment_id STRING,
-  start_vertex STRING,
-  end_vertex STRING,
-  one_way BOOLEAN,
-  length FLOAT
-);
+CREATE TABLE IF NOT EXISTS segment (
+  segment_id INT,
+  geometry STRING,
+  oneway STRING,
+  length FLOAT,
+  final_vertice_id INT,
+  start_vertice_id INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';'
+STORED AS TEXTFILE;
 
-CREATE TABLE vertice (
-  vertex_id STRING,
-  district_id STRING,
-  neighborhood_id STRING,
-  zone STRING
-);
+CREATE TABLE IF NOT EXISTS vertice (
+  vertice_id INT,
+  label STRING,
+  district_id INT,
+  neighborhood_id INT,
+  zone_id INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';'
+STORED AS TEXTFILE;
 
-CREATE TABLE district (
-  district_id STRING,
+CREATE TABLE IF NOT EXISTS district (
+  district_id INT,
   name STRING,
   geometry STRING
-);
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';'
+STORED AS TEXTFILE;
 
-CREATE TABLE neighborhood (
-  neighborhood_id STRING,
+CREATE TABLE IF NOT EXISTS neighborhood (
+  neighborhood_id INT,
   name STRING,
   geometry STRING
-);
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';'
+STORED AS TEXTFILE;
 
-CREATE TABLE time (
-  time_id STRING,
-  `date` DATE,
-  year INT,
-  month INT,
-  day_of_week STRING,
-  weekend BOOLEAN
-);
+CREATE TABLE IF NOT EXISTS `time` ( 
+  `time_id` INT, 
+  `period` STRING, 
+  `day` INT, 
+  `month` INT,
+  `year` INT, 
+  `weekday` STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';'
+STORED AS TEXTFILE;
+

@@ -3,7 +3,6 @@
 set -x
 cd "$(dirname "$0")"
 
-# Copy all queries to the container
 queries=(
     "1.sql"
     "2.sql"

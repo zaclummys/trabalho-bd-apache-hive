@@ -1,1 +1,0 @@
-# trabalho-bd-apache-hive
