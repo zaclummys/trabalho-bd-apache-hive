@@ -5,20 +5,20 @@ cd "$(dirname "$0")"
 
 tables=(
     "crime"
-    # "segment"
-    # "vertice"
-    # "district"
-    # "time"
-    # "neighborhood"
+    "segment"
+    "vertice"
+    "district"
+    "time"
+    "neighborhood"
 )
 
 filenames=(
     "crime.csv"
-    # "segment.csv"
-    # "vertice.csv"
-    # "time.csv"
-    # "district.csv"
-    # "neighborhood.csv"
+    "segment.csv"
+    "vertice.csv"
+    "time.csv"
+    "district.csv"
+    "neighborhood.csv"
 )
 
 docker cp data/. hive:/tmp/data/
