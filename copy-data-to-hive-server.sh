@@ -21,12 +21,12 @@ filenames=(
     "neighborhood.csv"
 )
 
-docker cp data/. hive:/tmp/data/
+docker cp data/. hive-hive-server-1:/tmp/data/
 
 for i in "${!tables[@]}"; do
     table="${tables[$i]}"
     filename="${filenames[$i]}"
     query="LOAD DATA LOCAL INPATH \"/tmp/data/$filename\" INTO TABLE \`$table\`;"
     echo "Executing query: $query"
-    docker exec -it hive bash -c "beeline -u jdbc:hive2://localhost:10000 -e '$query'"
+    docker exec -it hive-hive-server-1 bash -c "beeline -u jdbc:hive2://localhost:10000 -e '$query'"
 done

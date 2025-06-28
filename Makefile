@@ -1,8 +1,8 @@
 up:
-	docker-compose up -d
+	docker compose -f hive/docker-compose.yml up -d
 bash:
-	docker exec -it --user root hive bash 
+	docker compose -f hive/docker-compose.yml exec --user root hive-server bash 
 beeline:
-	docker exec -it --user root hive beeline -u jdbc:hive2://localhost:10000/default
+	docker compose -f hive/docker-compose.yml exec --user root hive-server beeline -u jdbc:hive2://localhost:10000/default
 down:
-	docker-compose down
+	docker compose -f hive/docker-compose.yml down
