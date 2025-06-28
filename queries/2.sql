@@ -1,3 +1,4 @@
+-- 2. Qual o total de crimes por tipo e por segmento das ruas do distrito de IGUATEMI entre 2006 e 2016?
 SELECT 
   SUM(soma_total_feminicide)              AS soma_total_feminicide,
   SUM(soma_total_homicide)                AS soma_total_homicide,
