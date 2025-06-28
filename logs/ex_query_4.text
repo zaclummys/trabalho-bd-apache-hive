@@ -1,0 +1,64 @@
+
+SLF4J: Class path contains multiple SLF4J bindings.
+
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings⁠ for an explanation.
+
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Execution log at: /tmp/root/root_20250628150837_330ff33e-772d-41f0-9aff-e4a308191d9b.log
+
+2025-06-28 15:10:49	Starting to launch local task to process map join;	maximum memory = 477626368
+
+2025-06-28 15:10:50	Dump the side-table for tag: 1 with group count: 2293 into file: file:/tmp/root/d37c6eae-bfd9-4386-83d4-f4ff2e680b22/hive_2025-06-28_15-08-37_472_4795286352484235313-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile01--.hashtable
+
+2025-06-28 15:10:50	Uploaded 1 File to: file:/tmp/root/d37c6eae-bfd9-4386-83d4-f4ff2e680b22/hive_2025-06-28_15-08-37_472_4795286352484235313-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile01--.hashtable (76297 bytes)
+
+2025-06-28 15:10:50	End of local task; Time Taken: 0.91 sec.
+
+Execution completed successfully
+
+MapredLocal task succeeded
+
+Launching Job 2 out of 2
+
+Number of reduce tasks determined at compile time: 1
+
+In order to change the average load for a reducer (in bytes):
+
+  set hive.exec.reducers.bytes.per.reducer=<number>
+
+In order to limit the maximum number of reducers:
+
+  set hive.exec.reducers.max=<number>
+
+In order to set a constant number of reducers:
+
+  set mapreduce.job.reduces=<number>
+
+Job running in-process (local Hadoop)
+
+2025-06-28 15:10:52,721 Stage-3 map = 0%,  reduce = 0%
+
+2025-06-28 15:10:57,749 Stage-3 map = 17%,  reduce = 0%
+
+2025-06-28 15:10:59,768 Stage-3 map = 100%,  reduce = 0%
+
+2025-06-28 15:11:05,786 Stage-3 map = 100%,  reduce = 100%
+
+Ended Job = job_local567533127_0002
+
+MapReduce Jobs Launched: 
+
+Stage-Stage-1:  HDFS Read: 6207963501 HDFS Write: 0 SUCCESS
+
+Stage-Stage-3:  HDFS Read: 2778163173 HDFS Write: 0 SUCCESS
+
+Total MapReduce CPU Time Spent: 0 msec
+
+OK
+
+
