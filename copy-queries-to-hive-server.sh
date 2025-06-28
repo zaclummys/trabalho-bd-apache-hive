@@ -13,8 +13,10 @@ queries=(
     "7.sql"
 )
 
+docker exec hive-hive-server-1 mkdir -p /tmp/queries
+
 for query in "${queries[@]}"; do
-    docker cp "queries/$query" hive-hive-server-1:/tmp/queries/
+    docker cp "queries/$query" hive-hive-server-1:/tmp/queries
 done
 
 for query in "${queries[@]}"; do
