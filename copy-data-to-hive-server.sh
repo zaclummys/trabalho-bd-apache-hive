@@ -7,8 +7,8 @@ tables=(
     "crime"
     "segment"
     "vertice"
-    "district"
     "time"
+    "district"
     "neighborhood"
 )
 
@@ -27,5 +27,6 @@ for i in "${!tables[@]}"; do
     table="${tables[$i]}"
     filename="${filenames[$i]}"
     query="LOAD DATA LOCAL INPATH \"/tmp/data/$filename\" INTO TABLE \`$table\`;"
+    echo "Executing query: $query"
     docker exec -it hive bash -c "beeline -u jdbc:hive2://localhost:10000 -e '$query'"
 done

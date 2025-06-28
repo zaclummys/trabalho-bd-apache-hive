@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS crime (
   segment_id INT,
   time_id INT
 )
+CLUSTERED BY (segment_id) INTO 4 BUCKETS
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ';'
 STORED AS TEXTFILE;
@@ -57,11 +58,11 @@ FIELDS TERMINATED BY ';'
 STORED AS TEXTFILE;
 
 CREATE TABLE IF NOT EXISTS `time` ( 
-  `time_id` INT, 
+  `time_id` STRING, 
   `period` STRING, 
-  `day` INT, 
-  `month` INT,
-  `year` INT, 
+  `day` STRING, 
+  `month` STRING,
+  `year` STRING, 
   `weekday` STRING
 )
 ROW FORMAT DELIMITED
