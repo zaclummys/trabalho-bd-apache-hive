@@ -8,6 +8,8 @@ sqls=(
     "create-clustered-tables.sql"
 )
 
+docker exec hive-hive-server-1 mkdir -p /tmp/schema
+
 for sql in "${sqls[@]}"; do
     docker cp "schema/$sql" hive-hive-server-1:/tmp/schema/
 done
