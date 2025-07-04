@@ -1,0 +1,27 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 2.3.2)
+Driver: Hive JDBC (version 2.3.2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+0: jdbc:hive2://localhost:10000> 0: jdbc:hive2://localhost:10000> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution log at: /tmp/root/root_20250703234928_aefcbef5-4c43-44e2-982d-4ad3a7d65c27.log
+2025-07-03 23:51:11	Starting to launch local task to process map join;	maximum memory = 477626368
+2025-07-03 23:51:12	Dump the side-table for tag: 1 with group count: 2287 into file: file:/tmp/root/7578e348-5d0f-41ce-9198-3ec781827496/hive_2025-07-03_23-49-28_829_6856586430089377626-1/-local-10007/HashTable-Stage-6/MapJoin-mapfile231--.hashtable
+2025-07-03 23:51:12	Uploaded 1 File to: file:/tmp/root/7578e348-5d0f-41ce-9198-3ec781827496/hive_2025-07-03_23-49-28_829_6856586430089377626-1/-local-10007/HashTable-Stage-6/MapJoin-mapfile231--.hashtable (57713 bytes)
+2025-07-03 23:51:12	End of local task; Time Taken: 0.739 sec.
++-----------------------+------------------------+
+| soma_total_cellphone  | soma_total_theft_auto  |
++-----------------------+------------------------+
+| 4123480               | 1544160                |
++-----------------------+------------------------+
+1 row selected (128.411 seconds)
+0: jdbc:hive2://localhost:10000> Closing: 0: jdbc:hive2://localhost:10000

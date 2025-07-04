@@ -1,0 +1,27 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 2.3.2)
+Driver: Hive JDBC (version 2.3.2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+0: jdbc:hive2://localhost:10000> 0: jdbc:hive2://localhost:10000> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution log at: /tmp/root/root_20250703234722_8969bc87-8dcd-4042-bf37-d6242b416b77.log
+2025-07-03 23:49:10	Starting to launch local task to process map join;	maximum memory = 477626368
+2025-07-03 23:49:12	Dump the side-table for tag: 1 with group count: 2293 into file: file:/tmp/root/cc313b09-da37-4299-9451-6a7def7c3d49/hive_2025-07-03_23-47-22_170_7839932695216590650-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile221--.hashtable
+2025-07-03 23:49:12	Uploaded 1 File to: file:/tmp/root/cc313b09-da37-4299-9451-6a7def7c3d49/hive_2025-07-03_23-47-22_170_7839932695216590650-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile221--.hashtable (67080 bytes)
+2025-07-03 23:49:12	End of local task; Time Taken: 1.458 sec.
++------------------------+----------------------+---------------------------+-------------------------+-----------------------------+-------------------------------------+------------------------+--------------------------------+
+| soma_total_feminicide  | soma_total_homicide  | soma_total_felony_murder  | soma_total_bodily_harm  | soma_total_theft_cellphone  | soma_total_armed_robbery_cellphone  | soma_total_theft_auto  | soma_total_armed_robbery_auto  |
++------------------------+----------------------+---------------------------+-------------------------+-----------------------------+-------------------------------------+------------------------+--------------------------------+
+| 0                      | 13000                | 1280                      | 0                       | 1686160                     | 1420880                             | 647080                 | 597320                         |
++------------------------+----------------------+---------------------------+-------------------------+-----------------------------+-------------------------------------+------------------------+--------------------------------+
+1 row selected (123.025 seconds)
+0: jdbc:hive2://localhost:10000> Closing: 0: jdbc:hive2://localhost:10000
