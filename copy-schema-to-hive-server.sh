@@ -9,6 +9,7 @@ sqls=(
 )
 
 for sql in "${sqls[@]}"; do
+    docker exec hive-hive-server-1 mkdir -p /tmp/schema
     docker cp "schema/$sql" hive-hive-server-1:/tmp/schema/
 done
 

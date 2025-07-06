@@ -1,0 +1,61 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 2.3.2)
+Driver: Hive JDBC (version 2.3.2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+0: jdbc:hive2://localhost:10000> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution log at: /tmp/root/root_20250703233954_bb85ab4a-781a-4343-b6e8-6b028c9adcc5.log
+2025-07-03 23:42:51	Starting to launch local task to process map join;	maximum memory = 477626368
+2025-07-03 23:42:54	Dump the side-table for tag: 1 with group count: 180598 into file: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10016/HashTable-Stage-22/MapJoin-mapfile181--.hashtable
+2025-07-03 23:42:54	Uploaded 1 File to: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10016/HashTable-Stage-22/MapJoin-mapfile181--.hashtable (5579155 bytes)
+2025-07-03 23:42:54	End of local task; Time Taken: 2.938 sec.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution log at: /tmp/root/root_20250703233954_bb85ab4a-781a-4343-b6e8-6b028c9adcc5.log
+2025-07-03 23:42:58	Starting to launch local task to process map join;	maximum memory = 477626368
+2025-07-03 23:43:01	Dump the side-table for tag: 1 with group count: 180598 into file: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10020/HashTable-Stage-25/MapJoin-mapfile211--.hashtable
+2025-07-03 23:43:01	Uploaded 1 File to: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10020/HashTable-Stage-25/MapJoin-mapfile211--.hashtable (5579155 bytes)
+2025-07-03 23:43:01	End of local task; Time Taken: 2.781 sec.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution log at: /tmp/root/root_20250703233954_bb85ab4a-781a-4343-b6e8-6b028c9adcc5.log
+2025-07-03 23:45:55	Starting to launch local task to process map join;	maximum memory = 477626368
+2025-07-03 23:45:57	Dump the side-table for tag: 1 with group count: 2287 into file: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10014/HashTable-Stage-5/MapJoin-mapfile161--.hashtable
+2025-07-03 23:45:57	Uploaded 1 File to: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10014/HashTable-Stage-5/MapJoin-mapfile161--.hashtable (66906 bytes)
+2025-07-03 23:45:57	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10014/HashTable-Stage-5/MapJoin-mapfile171--.hashtable
+2025-07-03 23:45:57	Uploaded 1 File to: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10014/HashTable-Stage-5/MapJoin-mapfile171--.hashtable (318 bytes)
+2025-07-03 23:45:57	End of local task; Time Taken: 1.736 sec.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution log at: /tmp/root/root_20250703233954_bb85ab4a-781a-4343-b6e8-6b028c9adcc5.log
+2025-07-03 23:46:01	Starting to launch local task to process map join;	maximum memory = 477626368
+2025-07-03 23:46:03	Dump the side-table for tag: 1 with group count: 2287 into file: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10018/HashTable-Stage-15/MapJoin-mapfile191--.hashtable
+2025-07-03 23:46:03	Uploaded 1 File to: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10018/HashTable-Stage-15/MapJoin-mapfile191--.hashtable (66906 bytes)
+2025-07-03 23:46:03	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10018/HashTable-Stage-15/MapJoin-mapfile201--.hashtable
+2025-07-03 23:46:03	Uploaded 1 File to: file:/tmp/root/d55144bc-2bea-4ded-928d-f82bed68417f/hive_2025-07-03_23-39-54_065_7477197424973484073-1/-local-10018/HashTable-Stage-15/MapJoin-mapfile201--.hashtable (318 bytes)
+2025-07-03 23:46:03	End of local task; Time Taken: 1.813 sec.
++----------------------+--------------------+-----------------+
+| total_roubo_celular  | total_roubo_carro  |      name       |
++----------------------+--------------------+-----------------+
+| 259200               | 23680              | Santa Efig?nia  |
++----------------------+--------------------+-----------------+
+1 row selected (444.097 seconds)
+0: jdbc:hive2://localhost:10000> Closing: 0: jdbc:hive2://localhost:10000

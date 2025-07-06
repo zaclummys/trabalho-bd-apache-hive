@@ -1,0 +1,36 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 2.3.2)
+Driver: Hive JDBC (version 2.3.2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+0: jdbc:hive2://localhost:10000> 0: jdbc:hive2://localhost:10000> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> . . . . . . . . . . . . . . . .> WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution log at: /tmp/root/root_20250703235140_391a72dc-6e79-48c2-b126-a82d58a1c685.log
+2025-07-03 23:53:54	Starting to launch local task to process map join;	maximum memory = 477626368
+2025-07-03 23:53:54	Dump the side-table for tag: 1 with group count: 133 into file: file:/tmp/root/bae2c155-585e-4107-944d-044dde6ef419/hive_2025-07-03_23-51-40_421_6614628140787428448-1/-local-10008/HashTable-Stage-7/MapJoin-mapfile251--.hashtable
+2025-07-03 23:53:54	Uploaded 1 File to: file:/tmp/root/bae2c155-585e-4107-944d-044dde6ef419/hive_2025-07-03_23-51-40_421_6614628140787428448-1/-local-10008/HashTable-Stage-7/MapJoin-mapfile251--.hashtable (3603 bytes)
+2025-07-03 23:53:54	End of local task; Time Taken: 0.44 sec.
++---------------+---------------------+
+| total_crimes  | segment.segment_id  |
++---------------+---------------------+
+| 96            | 34854               |
+| 48            | 224811              |
+| 32            | 117943              |
+| 32            | 89585               |
+| 32            | 208851              |
+| 32            | 129193              |
+| 32            | 128172              |
+| 32            | 65895               |
+| 32            | 129781              |
+| 32            | 14306               |
++---------------+---------------------+
+10 rows selected (162.054 seconds)
+0: jdbc:hive2://localhost:10000> Closing: 0: jdbc:hive2://localhost:10000

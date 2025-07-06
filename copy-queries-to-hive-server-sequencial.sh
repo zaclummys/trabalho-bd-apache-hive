@@ -20,5 +20,5 @@ for query in "${queries[@]}"; do
 done
 
 for query in "${queries[@]}"; do
-    docker exec hive-hive-server-1 bash -c "beeline -u jdbc:hive2://localhost:10000 -f /tmp/queries/$query"
+    docker exec hive-hive-server-1 bash -c "beeline -u jdbc:hive2://localhost:10000 -f /tmp/queries/$query" > "queries/$query.result" 2>&1
 done
