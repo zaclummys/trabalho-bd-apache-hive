@@ -1,0 +1,940 @@
+hive-server-1  | Configuring core
+hive-server-1  |  - Setting hadoop.proxyuser.hue.hosts=*
+hive-server-1  |  - Setting fs.defaultFS=hdfs://namenode:8020
+hive-server-1  |  - Setting hadoop.proxyuser.hue.groups=*
+hive-server-1  |  - Setting hadoop.http.staticuser.user=root
+hive-server-1  | Configuring hdfs
+hive-server-1  |  - Setting dfs.namenode.datanode.registration.ip-hostname-check=false
+hive-server-1  |  - Setting dfs.permissions.enabled=false
+hive-server-1  |  - Setting dfs.webhdfs.enabled=true
+hive-server-1  | Configuring yarn
+hive-server-1  |  - Setting yarn.resourcemanager.fs.state-store.uri=/rmstate
+hive-server-1  |  - Setting yarn.timeline-service.generic-application-history.enabled=true
+hive-server-1  |  - Setting yarn.resourcemanager.recovery.enabled=true
+hive-server-1  |  - Setting yarn.timeline-service.enabled=true
+hive-server-1  |  - Setting yarn.log-aggregation-enable=true
+hive-server-1  |  - Setting yarn.resourcemanager.store.class=org.apache.hadoop.yarn.server.resourcemanager.recovery.FileSystemRMStateStore
+hive-server-1  |  - Setting yarn.resourcemanager.system-metrics-publisher.enabled=true
+hive-server-1  |  - Setting yarn.nodemanager.remote-app-log-dir=/app-logs
+hive-server-1  |  - Setting yarn.resourcemanager.resource.tracker.address=resourcemanager:8031
+hive-server-1  |  - Setting yarn.resourcemanager.hostname=resourcemanager
+hive-server-1  |  - Setting yarn.timeline-service.hostname=historyserver
+hive-server-1  |  - Setting yarn.log.server.url=http://historyserver:8188/applicationhistory/logs/
+hive-server-1  |  - Setting yarn.resourcemanager.scheduler.address=resourcemanager:8030
+hive-server-1  |  - Setting yarn.resourcemanager.address=resourcemanager:8032
+hive-server-1  | Configuring httpfs
+hive-server-1  | Configuring kms
+hive-server-1  | Configuring mapred
+hive-server-1  | Configuring hive
+hive-server-1  |  - Setting hive.metastore.uris=thrift://hive-metastore:9083
+hive-server-1  |  - Setting datanucleus.autoCreateSchema=false
+hive-server-1  |  - Setting javax.jdo.option.ConnectionURL=jdbc:postgresql://hive-metastore-postgresql/metastore
+hive-server-1  |  - Setting javax.jdo.option.ConnectionDriverName=org.postgresql.Driver
+hive-server-1  |  - Setting javax.jdo.option.ConnectionPassword=hive
+hive-server-1  |  - Setting javax.jdo.option.ConnectionUserName=hive
+hive-server-1  | Configuring for multihomed network
+hive-server-1  | [1/100] check for hive-metastore:9083...
+hive-server-1  | [1/100] hive-metastore:9083 is not available yet
+hive-server-1  | [1/100] try in 5s once again ...
+hive-server-1  | [2/100] check for hive-metastore:9083...
+hive-server-1  | [2/100] hive-metastore:9083 is not available yet
+hive-server-1  | [2/100] try in 5s once again ...
+hive-server-1  | [3/100] check for hive-metastore:9083...
+hive-server-1  | [3/100] hive-metastore:9083 is not available yet
+hive-server-1  | [3/100] try in 5s once again ...
+hive-server-1  | [4/100] check for hive-metastore:9083...
+hive-server-1  | [4/100] hive-metastore:9083 is not available yet
+hive-server-1  | [4/100] try in 5s once again ...
+hive-server-1  | [5/100] check for hive-metastore:9083...
+hive-server-1  | [5/100] hive-metastore:9083 is not available yet
+hive-server-1  | [5/100] try in 5s once again ...
+hive-server-1  | [6/100] check for hive-metastore:9083...
+hive-server-1  | [6/100] hive-metastore:9083 is not available yet
+hive-server-1  | [6/100] try in 5s once again ...
+hive-server-1  | [7/100] check for hive-metastore:9083...
+hive-server-1  | [7/100] hive-metastore:9083 is not available yet
+hive-server-1  | [7/100] try in 5s once again ...
+hive-server-1  | [8/100] hive-metastore:9083 is available.
+hive-server-1  | 2025-07-06 16:23:18: Starting HiveServer2
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | OK
+hive-server-1  | Loading data to table default.crime_tmp
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162358_473ecf10-f2ae-4f3e-9068-4347ee6b4016
+hive-server-1  | Total jobs = 1
+hive-server-1  | Launching Job 1 out of 1
+hive-server-1  | Number of reduce tasks determined at compile time: 4
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:24:02,762 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:24:10,838 Stage-1 map = 34%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:24:16,876 Stage-1 map = 67%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:24:19,885 Stage-1 map = 89%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:24:21,893 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:24:27,918 Stage-1 map = 100%,  reduce = 17%
+hive-server-1  | 2025-07-06 16:24:30,928 Stage-1 map = 100%,  reduce = 25%
+hive-server-1  | 2025-07-06 16:24:35,953 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:24:40,981 Stage-1 map = 100%,  reduce = 75%
+hive-server-1  | 2025-07-06 16:24:44,991 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local2006202038_0001
+hive-server-1  | Loading data to table default.crime
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 1314743885 HDFS Write: 1970917972 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | Loading data to table default.segment_tmp
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162450_22d5f5a9-5f2f-4387-a271-25353cf3a391
+hive-server-1  | Total jobs = 1
+hive-server-1  | Launching Job 1 out of 1
+hive-server-1  | Number of reduce tasks determined at compile time: 4
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:24:51,698 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:24:52,700 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:24:53,704 Stage-1 map = 100%,  reduce = 25%
+hive-server-1  | 2025-07-06 16:24:54,705 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:24:55,706 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local757085197_0002
+hive-server-1  | Loading data to table default.segment
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 1543426815 HDFS Write: 2972463024 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | Loading data to table default.vertice_tmp
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162458_ecb1a236-1931-483f-86b3-a2e1d9753fbf
+hive-server-1  | Total jobs = 1
+hive-server-1  | Launching Job 1 out of 1
+hive-server-1  | Number of reduce tasks determined at compile time: 4
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:25:00,102 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:25:01,106 Stage-1 map = 100%,  reduce = 25%
+hive-server-1  | 2025-07-06 16:25:02,107 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local77025461_0003
+hive-server-1  | Loading data to table default.vertice
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 1562859655 HDFS Write: 3115963391 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | Loading data to table default.time_tmp
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162506_3c29610a-9042-47cc-a115-c8e1721ee787
+hive-server-1  | Total jobs = 1
+hive-server-1  | Launching Job 1 out of 1
+hive-server-1  | Number of reduce tasks determined at compile time: 4
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:25:07,720 Stage-1 map = 100%,  reduce = 75%
+hive-server-1  | 2025-07-06 16:25:08,721 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1833902652_0004
+hive-server-1  | Loading data to table default.time
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 1567113475 HDFS Write: 3132059081 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | Loading data to table default.district_tmp
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162512_83b1d4fb-3392-4ba2-ba14-01869b060622
+hive-server-1  | Total jobs = 1
+hive-server-1  | Launching Job 1 out of 1
+hive-server-1  | Number of reduce tasks determined at compile time: 4
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:25:13,825 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:25:14,826 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1938555736_0005
+hive-server-1  | Loading data to table default.district
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 1592271750 HDFS Write: 3171277807 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | Loading data to table default.neighborhood_tmp
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162518_66e38852-8ba4-4bc1-ab8b-11350605f099
+hive-server-1  | Total jobs = 1
+hive-server-1  | Launching Job 1 out of 1
+hive-server-1  | Number of reduce tasks determined at compile time: 4
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:25:19,376 Stage-1 map = 100%,  reduce = 25%
+hive-server-1  | 2025-07-06 16:25:20,377 Stage-1 map = 100%,  reduce = 75%
+hive-server-1  | 2025-07-06 16:25:21,379 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local11503260_0006
+hive-server-1  | Loading data to table default.neighborhood
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 1603272500 HDFS Write: 3201045300 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | No Stats for default@crime, Columns: total_felony_murder, time_id, total_feminicide, total_theft_cellphone, total_armed_robbery_cellphone, total_bodily_harm, total_theft_auto, segment_id, total_armed_robbery_auto, total_homicide
+hive-server-1  | No Stats for default@segment, Columns: start_vertice_id, segment_id
+hive-server-1  | No Stats for default@time, Columns: time_id, year
+hive-server-1  | No Stats for default@vertice, Columns: vertice_id, district_id
+hive-server-1  | No Stats for default@district, Columns: name, district_id
+hive-server-1  | No Stats for default@crime, Columns: total_felony_murder, time_id, total_feminicide, total_theft_cellphone, total_armed_robbery_cellphone, total_bodily_harm, total_theft_auto, segment_id, total_armed_robbery_auto, total_homicide
+hive-server-1  | No Stats for default@segment, Columns: final_vertice_id, segment_id
+hive-server-1  | No Stats for default@time, Columns: time_id, year
+hive-server-1  | No Stats for default@vertice, Columns: vertice_id, district_id
+hive-server-1  | No Stats for default@district, Columns: name, district_id
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162524_8dcb0777-bf9b-41d5-827e-295e377e852e
+hive-server-1  | Total jobs = 5
+hive-server-1  | Launching Job 1 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:25:27,219 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:25:33,225 Stage-1 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:25:39,231 Stage-1 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:25:45,240 Stage-1 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:25:48,243 Stage-1 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:25:51,245 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:25:57,250 Stage-1 map = 100%,  reduce = 42%
+hive-server-1  | 2025-07-06 16:26:00,263 Stage-1 map = 100%,  reduce = 47%
+hive-server-1  | 2025-07-06 16:26:02,266 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:26:08,282 Stage-1 map = 100%,  reduce = 93%
+hive-server-1  | 2025-07-06 16:26:11,286 Stage-1 map = 100%,  reduce = 98%
+hive-server-1  | 2025-07-06 16:26:12,287 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local296361173_0007
+hive-server-1  | Launching Job 2 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:26:13,528 Stage-11 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:26:19,531 Stage-11 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:26:24,539 Stage-11 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:26:30,545 Stage-11 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:26:33,547 Stage-11 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:26:36,550 Stage-11 map = 44%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:26:38,553 Stage-11 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:26:44,562 Stage-11 map = 100%,  reduce = 44%
+hive-server-1  | 2025-07-06 16:26:47,575 Stage-11 map = 100%,  reduce = 47%
+hive-server-1  | 2025-07-06 16:26:49,582 Stage-11 map = 100%,  reduce = 100%
+hive-server-1  | 2025-07-06 16:26:50,583 Stage-11 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:26:55,591 Stage-11 map = 100%,  reduce = 93%
+hive-server-1  | 2025-07-06 16:26:58,594 Stage-11 map = 100%,  reduce = 98%
+hive-server-1  | 2025-07-06 16:26:59,595 Stage-11 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1758534930_0008
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706162524_8dcb0777-bf9b-41d5-827e-295e377e852e.log
+hive-server-1  | 2025-07-06 16:27:03	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:27:06	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile01--.hashtable
+hive-server-1  | 2025-07-06 16:27:06	Uploaded 1 File to: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile01--.hashtable (278 bytes)
+hive-server-1  | 2025-07-06 16:27:06	Dump the side-table for tag: 1 with group count: 180598 into file: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile11--.hashtable
+hive-server-1  | 2025-07-06 16:27:06	Uploaded 1 File to: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile11--.hashtable (4108057 bytes)
+hive-server-1  | 2025-07-06 16:27:06	Dump the side-table for tag: 1 with group count: 2293 into file: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile21--.hashtable
+hive-server-1  | 2025-07-06 16:27:06	Uploaded 1 File to: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile21--.hashtable (57863 bytes)
+hive-server-1  | 2025-07-06 16:27:06	End of local task; Time Taken: 3.417 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706162524_8dcb0777-bf9b-41d5-827e-295e377e852e.log
+hive-server-1  | 2025-07-06 16:27:10	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:27:12	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile31--.hashtable
+hive-server-1  | 2025-07-06 16:27:12	Uploaded 1 File to: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile31--.hashtable (278 bytes)
+hive-server-1  | 2025-07-06 16:27:12	Dump the side-table for tag: 1 with group count: 180598 into file: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile41--.hashtable
+hive-server-1  | 2025-07-06 16:27:12	Uploaded 1 File to: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile41--.hashtable (4108057 bytes)
+hive-server-1  | 2025-07-06 16:27:12	Dump the side-table for tag: 1 with group count: 2293 into file: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile51--.hashtable
+hive-server-1  | 2025-07-06 16:27:12	Uploaded 1 File to: file:/tmp/root/e12b2ea5-311e-4f32-a96f-9f6334921e71/hive_2025-07-06_16-25-24_103_7838433291939522849-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile51--.hashtable (57863 bytes)
+hive-server-1  | 2025-07-06 16:27:12	End of local task; Time Taken: 2.002 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | Launching Job 3 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:27:14,235 Stage-5 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:19,244 Stage-5 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:22,247 Stage-5 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1578550539_0009
+hive-server-1  | Launching Job 4 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:27:23,829 Stage-15 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:28,835 Stage-15 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:30,837 Stage-15 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1490185264_0010
+hive-server-1  | Launching Job 5 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:27:32,037 Stage-6 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local732930924_0011
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 2471608611 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-11:  HDFS Read: 3706335015 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-5:  HDFS Read: 2814054066 HDFS Write: 1923900600 SUCCESS
+hive-server-1  | Stage-Stage-15:  HDFS Read: 2814054066 HDFS Write: 1923900600 SUCCESS
+hive-server-1  | Stage-Stage-6:  HDFS Read: 2814054066 HDFS Write: 1923900600 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | No Stats for default@crime, Columns: total_felony_murder, time_id, total_feminicide, total_theft_cellphone, total_armed_robbery_cellphone, total_bodily_harm, total_theft_auto, segment_id, total_armed_robbery_auto, total_homicide
+hive-server-1  | No Stats for default@segment, Columns: start_vertice_id, segment_id
+hive-server-1  | No Stats for default@time, Columns: time_id, year
+hive-server-1  | No Stats for default@vertice, Columns: vertice_id, district_id
+hive-server-1  | No Stats for default@district, Columns: name, district_id
+hive-server-1  | No Stats for default@crime, Columns: total_felony_murder, time_id, total_feminicide, total_theft_cellphone, total_armed_robbery_cellphone, total_bodily_harm, total_theft_auto, segment_id, total_armed_robbery_auto, total_homicide
+hive-server-1  | No Stats for default@segment, Columns: final_vertice_id, segment_id
+hive-server-1  | No Stats for default@time, Columns: time_id, year
+hive-server-1  | No Stats for default@vertice, Columns: vertice_id, district_id
+hive-server-1  | No Stats for default@district, Columns: name, district_id
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162734_bef0b954-c7c4-4dd1-9a59-c398d995f97f
+hive-server-1  | Total jobs = 5
+hive-server-1  | Launching Job 1 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:27:36,688 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:42,695 Stage-1 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:48,701 Stage-1 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:54,707 Stage-1 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:56,709 Stage-1 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:27:59,712 Stage-1 map = 42%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:28:01,715 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:28:08,721 Stage-1 map = 100%,  reduce = 42%
+hive-server-1  | 2025-07-06 16:28:11,724 Stage-1 map = 100%,  reduce = 46%
+hive-server-1  | 2025-07-06 16:28:13,726 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:28:19,739 Stage-1 map = 100%,  reduce = 94%
+hive-server-1  | 2025-07-06 16:28:22,749 Stage-1 map = 100%,  reduce = 98%
+hive-server-1  | 2025-07-06 16:28:23,750 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1781202368_0012
+hive-server-1  | Launching Job 2 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:28:24,944 Stage-11 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:28:30,946 Stage-11 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:28:35,952 Stage-11 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:28:41,957 Stage-11 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:28:47,967 Stage-11 map = 41%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:28:49,972 Stage-11 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:28:56,978 Stage-11 map = 100%,  reduce = 42%
+hive-server-1  | 2025-07-06 16:28:59,985 Stage-11 map = 100%,  reduce = 46%
+hive-server-1  | 2025-07-06 16:29:02,991 Stage-11 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:29:08,996 Stage-11 map = 100%,  reduce = 94%
+hive-server-1  | 2025-07-06 16:29:12,001 Stage-11 map = 100%,  reduce = 98%
+hive-server-1  | 2025-07-06 16:29:14,008 Stage-11 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local192223029_0013
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706162734_bef0b954-c7c4-4dd1-9a59-c398d995f97f.log
+hive-server-1  | 2025-07-06 16:29:17	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:29:18	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile61--.hashtable
+hive-server-1  | 2025-07-06 16:29:18	Uploaded 1 File to: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile61--.hashtable (278 bytes)
+hive-server-1  | 2025-07-06 16:29:18	Dump the side-table for tag: 1 with group count: 180598 into file: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile71--.hashtable
+hive-server-1  | 2025-07-06 16:29:19	Uploaded 1 File to: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile71--.hashtable (4108057 bytes)
+hive-server-1  | 2025-07-06 16:29:19	Dump the side-table for tag: 1 with group count: 13795 into file: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile81--.hashtable
+hive-server-1  | 2025-07-06 16:29:19	Uploaded 1 File to: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile81--.hashtable (346818 bytes)
+hive-server-1  | 2025-07-06 16:29:19	End of local task; Time Taken: 1.906 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706162734_bef0b954-c7c4-4dd1-9a59-c398d995f97f.log
+hive-server-1  | 2025-07-06 16:29:23	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:29:24	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile91--.hashtable
+hive-server-1  | 2025-07-06 16:29:24	Uploaded 1 File to: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile91--.hashtable (278 bytes)
+hive-server-1  | 2025-07-06 16:29:24	Dump the side-table for tag: 1 with group count: 180598 into file: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile101--.hashtable
+hive-server-1  | 2025-07-06 16:29:24	Uploaded 1 File to: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile101--.hashtable (4108057 bytes)
+hive-server-1  | 2025-07-06 16:29:24	Dump the side-table for tag: 1 with group count: 13795 into file: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile111--.hashtable
+hive-server-1  | 2025-07-06 16:29:25	Uploaded 1 File to: file:/tmp/root/0ab8207f-0169-44ab-bb35-9f7b8d9c2370/hive_2025-07-06_16-27-34_296_8628649592746544641-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile111--.hashtable (346818 bytes)
+hive-server-1  | 2025-07-06 16:29:25	End of local task; Time Taken: 1.995 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | Launching Job 3 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:29:26,665 Stage-5 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:29:35,672 Stage-5 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:29:36,674 Stage-5 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:29:37,675 Stage-5 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1076116061_0014
+hive-server-1  | Launching Job 4 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:29:38,908 Stage-15 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:29:47,911 Stage-15 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:29:49,913 Stage-15 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local878224698_0015
+hive-server-1  | Launching Job 5 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:29:51,096 Stage-6 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local845559875_0016
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 4941061419 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-11:  HDFS Read: 6175787823 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-5:  HDFS Read: 4666143672 HDFS Write: 1923900600 SUCCESS
+hive-server-1  | Stage-Stage-15:  HDFS Read: 4666143672 HDFS Write: 1923900600 SUCCESS
+hive-server-1  | Stage-Stage-6:  HDFS Read: 4666143672 HDFS Write: 1923900600 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | No Stats for default@crime, Columns: time_id, total_theft_cellphone, total_theft_auto, segment_id
+hive-server-1  | No Stats for default@segment, Columns: final_vertice_id, segment_id
+hive-server-1  | No Stats for default@vertice, Columns: vertice_id, neighborhood_id
+hive-server-1  | No Stats for default@neighborhood, Columns: neighborhood_id, name
+hive-server-1  | No Stats for default@time, Columns: time_id, year
+hive-server-1  | No Stats for default@crime, Columns: time_id, total_theft_cellphone, total_theft_auto, segment_id
+hive-server-1  | No Stats for default@segment, Columns: start_vertice_id, segment_id
+hive-server-1  | No Stats for default@vertice, Columns: vertice_id, neighborhood_id
+hive-server-1  | No Stats for default@neighborhood, Columns: neighborhood_id, name
+hive-server-1  | No Stats for default@time, Columns: time_id, year
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706162954_9120e2e3-07af-4175-8544-f70c8300d174
+hive-server-1  | Total jobs = 5
+hive-server-1  | Launching Job 1 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:29:56,645 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:02,651 Stage-1 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:04,655 Stage-1 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:07,659 Stage-1 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:10,662 Stage-1 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:13,666 Stage-1 map = 42%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:16,669 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:22,674 Stage-1 map = 100%,  reduce = 48%
+hive-server-1  | 2025-07-06 16:30:23,676 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:30:29,690 Stage-1 map = 100%,  reduce = 98%
+hive-server-1  | 2025-07-06 16:30:30,691 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local519566966_0017
+hive-server-1  | Launching Job 2 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:30:31,879 Stage-11 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:36,885 Stage-11 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:39,889 Stage-11 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:42,891 Stage-11 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:45,894 Stage-11 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:48,896 Stage-11 map = 46%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:49,898 Stage-11 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:30:56,908 Stage-11 map = 100%,  reduce = 48%
+hive-server-1  | 2025-07-06 16:30:57,909 Stage-11 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:31:03,921 Stage-11 map = 100%,  reduce = 95%
+hive-server-1  | 2025-07-06 16:31:04,922 Stage-11 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local955468484_0018
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706162954_9120e2e3-07af-4175-8544-f70c8300d174.log
+hive-server-1  | 2025-07-06 16:31:10	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:31:12	Dump the side-table for tag: 1 with group count: 2287 into file: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile121--.hashtable
+hive-server-1  | 2025-07-06 16:31:12	Uploaded 1 File to: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile121--.hashtable (57713 bytes)
+hive-server-1  | 2025-07-06 16:31:12	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile131--.hashtable
+hive-server-1  | 2025-07-06 16:31:12	Uploaded 1 File to: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile131--.hashtable (296 bytes)
+hive-server-1  | 2025-07-06 16:31:12	Dump the side-table for tag: 1 with group count: 180598 into file: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile141--.hashtable
+hive-server-1  | 2025-07-06 16:31:13	Uploaded 1 File to: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10014/HashTable-Stage-5/MapJoin-mapfile141--.hashtable (4299166 bytes)
+hive-server-1  | 2025-07-06 16:31:13	End of local task; Time Taken: 2.119 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706162954_9120e2e3-07af-4175-8544-f70c8300d174.log
+hive-server-1  | 2025-07-06 16:31:16	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:31:18	Dump the side-table for tag: 1 with group count: 2287 into file: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile151--.hashtable
+hive-server-1  | 2025-07-06 16:31:18	Uploaded 1 File to: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile151--.hashtable (57713 bytes)
+hive-server-1  | 2025-07-06 16:31:18	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile161--.hashtable
+hive-server-1  | 2025-07-06 16:31:18	Uploaded 1 File to: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile161--.hashtable (296 bytes)
+hive-server-1  | 2025-07-06 16:31:18	Dump the side-table for tag: 1 with group count: 180598 into file: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile171--.hashtable
+hive-server-1  | 2025-07-06 16:31:18	Uploaded 1 File to: file:/tmp/root/b5f52a49-c8df-4535-a4b1-6ea07884e81a/hive_2025-07-06_16-29-54_383_4523149955118129490-4/-local-10016/HashTable-Stage-15/MapJoin-mapfile171--.hashtable (4299166 bytes)
+hive-server-1  | 2025-07-06 16:31:18	End of local task; Time Taken: 2.011 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | Launching Job 3 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:31:20,455 Stage-5 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:31:25,458 Stage-5 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:31:27,460 Stage-5 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1241324819_0019
+hive-server-1  | Launching Job 4 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:31:28,632 Stage-15 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:31:34,636 Stage-15 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:31:35,636 Stage-15 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local307392072_0020
+hive-server-1  | Launching Job 5 out of 5
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:31:36,818 Stage-6 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local686929282_0021
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 7410514227 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-11:  HDFS Read: 8645240631 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-5:  HDFS Read: 4345488852 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Stage-Stage-15:  HDFS Read: 4345488852 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Stage-Stage-6:  HDFS Read: 6518233278 HDFS Write: 1923900600 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | No Stats for default@crime, Columns: total_felony_murder, time_id, total_feminicide, total_theft_cellphone, total_armed_robbery_cellphone, total_bodily_harm, total_theft_auto, segment_id, total_armed_robbery_auto, total_homicide
+hive-server-1  | No Stats for default@segment, Columns: segment_id, oneway
+hive-server-1  | No Stats for default@time, Columns: time_id, year
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706163138_92302a60-6f27-4615-a1e6-08055b168368
+hive-server-1  | Total jobs = 2
+hive-server-1  | Launching Job 1 out of 2
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:31:40,688 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:31:46,692 Stage-1 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:31:52,696 Stage-1 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:31:55,699 Stage-1 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:01,704 Stage-1 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:04,705 Stage-1 map = 46%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:05,706 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:11,719 Stage-1 map = 100%,  reduce = 44%
+hive-server-1  | 2025-07-06 16:32:14,727 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:32:20,734 Stage-1 map = 100%,  reduce = 98%
+hive-server-1  | 2025-07-06 16:32:21,735 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1745491909_0022
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706163138_92302a60-6f27-4615-a1e6-08055b168368.log
+hive-server-1  | 2025-07-06 16:32:25	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:32:27	Dump the side-table for tag: 1 with group count: 2293 into file: file:/tmp/root/ee089a76-ac4b-4043-ad7e-3324db79d8bb/hive_2025-07-06_16-31-39_004_4419636515941770895-4/-local-10006/HashTable-Stage-3/MapJoin-mapfile181--.hashtable
+hive-server-1  | 2025-07-06 16:32:27	Uploaded 1 File to: file:/tmp/root/ee089a76-ac4b-4043-ad7e-3324db79d8bb/hive_2025-07-06_16-31-39_004_4419636515941770895-4/-local-10006/HashTable-Stage-3/MapJoin-mapfile181--.hashtable (57863 bytes)
+hive-server-1  | 2025-07-06 16:32:27	End of local task; Time Taken: 1.999 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | Launching Job 2 out of 2
+hive-server-1  | Number of reduce tasks determined at compile time: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:32:28,768 Stage-3 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:30,769 Stage-3 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local87451346_0023
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 9879967035 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-3:  HDFS Read: 4962852054 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706163232_89248cae-1223-4199-a1b0-dcb8bd7ea766
+hive-server-1  | Total jobs = 6
+hive-server-1  | Launching Job 1 out of 6
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:32:34,524 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:39,529 Stage-1 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:42,533 Stage-1 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:48,538 Stage-1 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:51,543 Stage-1 map = 36%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:54,544 Stage-1 map = 50%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:32:55,547 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:01,555 Stage-1 map = 100%,  reduce = 43%
+hive-server-1  | 2025-07-06 16:33:03,557 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | 2025-07-06 16:33:04,559 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:33:09,565 Stage-1 map = 100%,  reduce = 94%
+hive-server-1  | 2025-07-06 16:33:12,568 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local2012563317_0024
+hive-server-1  | Launching Job 2 out of 6
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:33:13,768 Stage-5 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1750833478_0025
+hive-server-1  | Stage-9 is selected by condition resolver.
+hive-server-1  | Stage-10 is filtered out by condition resolver.
+hive-server-1  | Stage-2 is filtered out by condition resolver.
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706163232_89248cae-1223-4199-a1b0-dcb8bd7ea766.log
+hive-server-1  | 2025-07-06 16:33:17	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:33:17	Dump the side-table for tag: 1 with group count: 2287 into file: file:/tmp/root/4d861391-19c7-458e-8de3-b439805bb83f/hive_2025-07-06_16-32-32_975_2517114928262010628-4/-local-10007/HashTable-Stage-6/MapJoin-mapfile191--.hashtable
+hive-server-1  | 2025-07-06 16:33:18	Uploaded 1 File to: file:/tmp/root/4d861391-19c7-458e-8de3-b439805bb83f/hive_2025-07-06_16-32-32_975_2517114928262010628-4/-local-10007/HashTable-Stage-6/MapJoin-mapfile191--.hashtable (57713 bytes)
+hive-server-1  | 2025-07-06 16:33:18	End of local task; Time Taken: 0.542 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | Launching Job 4 out of 6
+hive-server-1  | Number of reduce tasks is set to 0 since there's no reduce operator
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:33:19,363 Stage-6 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:23,365 Stage-6 map = 100%,  reduce = 0%
+hive-server-1  | Ended Job = job_local117317845_0026
+hive-server-1  | Launching Job 5 out of 6
+hive-server-1  | Number of reduce tasks determined at compile time: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:33:24,524 Stage-3 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1453289149_0027
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 11114693439 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-5:  HDFS Read: 5581916160 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Stage-Stage-6:  HDFS Read: 2790958080 HDFS Write: 641300200 SUCCESS
+hive-server-1  | Stage-Stage-3:  HDFS Read: 5581916160 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706163326_6e150018-2fe5-4638-850e-67af33090f7d
+hive-server-1  | Total jobs = 7
+hive-server-1  | Launching Job 1 out of 7
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:33:28,355 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:34,362 Stage-1 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:39,368 Stage-1 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:45,374 Stage-1 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:48,376 Stage-1 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:51,377 Stage-1 map = 44%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:53,379 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:33:59,384 Stage-1 map = 100%,  reduce = 41%
+hive-server-1  | 2025-07-06 16:34:02,386 Stage-1 map = 100%,  reduce = 46%
+hive-server-1  | 2025-07-06 16:34:05,388 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:34:11,392 Stage-1 map = 100%,  reduce = 93%
+hive-server-1  | 2025-07-06 16:34:14,416 Stage-1 map = 100%,  reduce = 97%
+hive-server-1  | 2025-07-06 16:34:16,418 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1539731801_0028
+hive-server-1  | Launching Job 2 out of 7
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:34:17,616 Stage-6 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local753564254_0029
+hive-server-1  | Stage-10 is selected by condition resolver.
+hive-server-1  | Stage-11 is filtered out by condition resolver.
+hive-server-1  | Stage-2 is filtered out by condition resolver.
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706163326_6e150018-2fe5-4638-850e-67af33090f7d.log
+hive-server-1  | 2025-07-06 16:34:20	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:34:21	Dump the side-table for tag: 1 with group count: 133 into file: file:/tmp/root/3f35af23-c8c2-408e-8003-58423f348987/hive_2025-07-06_16-33-26_595_773580043094986640-4/-local-10008/HashTable-Stage-7/MapJoin-mapfile211--.hashtable
+hive-server-1  | 2025-07-06 16:34:21	Uploaded 1 File to: file:/tmp/root/3f35af23-c8c2-408e-8003-58423f348987/hive_2025-07-06_16-33-26_595_773580043094986640-4/-local-10008/HashTable-Stage-7/MapJoin-mapfile211--.hashtable (3603 bytes)
+hive-server-1  | 2025-07-06 16:34:21	End of local task; Time Taken: 0.449 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | Launching Job 4 out of 7
+hive-server-1  | Number of reduce tasks is set to 0 since there's no reduce operator
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:34:22,514 Stage-7 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:34:27,516 Stage-7 map = 100%,  reduce = 0%
+hive-server-1  | Ended Job = job_local592897177_0030
+hive-server-1  | Launching Job 5 out of 7
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:34:28,664 Stage-3 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1541562612_0031
+hive-server-1  | Launching Job 6 out of 7
+hive-server-1  | Number of reduce tasks determined at compile time: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:34:29,828 Stage-4 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local849114973_0032
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 12352821651 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-6:  HDFS Read: 6200980266 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Stage-Stage-7:  HDFS Read: 3100490133 HDFS Write: 641300200 SUCCESS
+hive-server-1  | Stage-Stage-3:  HDFS Read: 6200980266 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Stage-Stage-4:  HDFS Read: 6200980266 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
+hive-server-1  | WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive-server-1  | Query ID = root_20250706163431_6d3444b5-b2ef-4d0f-8252-fd8b2e410458
+hive-server-1  | Total jobs = 7
+hive-server-1  | Launching Job 1 out of 7
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 2
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:34:33,527 Stage-1 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:34:39,531 Stage-1 map = 8%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:34:44,536 Stage-1 map = 17%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:34:47,538 Stage-1 map = 25%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:34:53,544 Stage-1 map = 33%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:34:56,547 Stage-1 map = 45%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:34:59,550 Stage-1 map = 49%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:35:01,551 Stage-1 map = 100%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:35:07,555 Stage-1 map = 100%,  reduce = 42%
+hive-server-1  | 2025-07-06 16:35:10,560 Stage-1 map = 100%,  reduce = 47%
+hive-server-1  | 2025-07-06 16:35:12,563 Stage-1 map = 100%,  reduce = 50%
+hive-server-1  | 2025-07-06 16:35:18,567 Stage-1 map = 100%,  reduce = 93%
+hive-server-1  | 2025-07-06 16:35:21,569 Stage-1 map = 100%,  reduce = 97%
+hive-server-1  | 2025-07-06 16:35:23,571 Stage-1 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local2119298629_0033
+hive-server-1  | Launching Job 2 out of 7
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:35:24,742 Stage-6 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local378554706_0034
+hive-server-1  | Stage-10 is selected by condition resolver.
+hive-server-1  | Stage-11 is filtered out by condition resolver.
+hive-server-1  | Stage-2 is filtered out by condition resolver.
+hive-server-1  | SLF4J: Class path contains multiple SLF4J bindings.
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+hive-server-1  | SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+hive-server-1  | SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+hive-server-1  | Execution log at: /tmp/root/root_20250706163431_6d3444b5-b2ef-4d0f-8252-fd8b2e410458.log
+hive-server-1  | 2025-07-06 16:35:27	Starting to launch local task to process map join;	maximum memory = 477626368
+hive-server-1  | 2025-07-06 16:35:28	Dump the side-table for tag: 1 with group count: 544 into file: file:/tmp/root/e1216222-53ac-46be-9524-0872428fe553/hive_2025-07-06_16-34-31_872_3965520673966652181-4/-local-10008/HashTable-Stage-7/MapJoin-mapfile231--.hashtable
+hive-server-1  | 2025-07-06 16:35:28	Uploaded 1 File to: file:/tmp/root/e1216222-53ac-46be-9524-0872428fe553/hive_2025-07-06_16-34-31_872_3965520673966652181-4/-local-10008/HashTable-Stage-7/MapJoin-mapfile231--.hashtable (13928 bytes)
+hive-server-1  | 2025-07-06 16:35:28	End of local task; Time Taken: 0.447 sec.
+hive-server-1  | Execution completed successfully
+hive-server-1  | MapredLocal task succeeded
+hive-server-1  | Launching Job 4 out of 7
+hive-server-1  | Number of reduce tasks is set to 0 since there's no reduce operator
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:35:29,377 Stage-7 map = 0%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:35:34,389 Stage-7 map = 50%,  reduce = 0%
+hive-server-1  | 2025-07-06 16:35:35,389 Stage-7 map = 100%,  reduce = 0%
+hive-server-1  | Ended Job = job_local658477173_0035
+hive-server-1  | Launching Job 5 out of 7
+hive-server-1  | Number of reduce tasks not specified. Estimated from input data size: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:35:36,566 Stage-3 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1276752044_0036
+hive-server-1  | Launching Job 6 out of 7
+hive-server-1  | Number of reduce tasks determined at compile time: 1
+hive-server-1  | In order to change the average load for a reducer (in bytes):
+hive-server-1  |   set hive.exec.reducers.bytes.per.reducer=<number>
+hive-server-1  | In order to limit the maximum number of reducers:
+hive-server-1  |   set hive.exec.reducers.max=<number>
+hive-server-1  | In order to set a constant number of reducers:
+hive-server-1  |   set mapreduce.job.reduces=<number>
+hive-server-1  | Job running in-process (local Hadoop)
+hive-server-1  | 2025-07-06 16:35:37,715 Stage-4 map = 100%,  reduce = 100%
+hive-server-1  | Ended Job = job_local1349180016_0037
+hive-server-1  | MapReduce Jobs Launched: 
+hive-server-1  | Stage-Stage-1:  HDFS Read: 13590949863 HDFS Write: 2565200800 SUCCESS
+hive-server-1  | Stage-Stage-6:  HDFS Read: 6820044372 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Stage-Stage-7:  HDFS Read: 3410022186 HDFS Write: 641300200 SUCCESS
+hive-server-1  | Stage-Stage-3:  HDFS Read: 6820044372 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Stage-Stage-4:  HDFS Read: 6820044372 HDFS Write: 1282600400 SUCCESS
+hive-server-1  | Total MapReduce CPU Time Spent: 0 msec
+hive-server-1  | OK
