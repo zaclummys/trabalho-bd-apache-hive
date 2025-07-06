@@ -21,6 +21,8 @@ filenames=(
     "neighborhood.csv"
 )
 
+docker exec hive-hive-server-1 mkdir -p /tmp/data/
+
 # Copia os arquivos para dentro do container
 docker cp data/. hive-hive-server-1:/tmp/data/
 
