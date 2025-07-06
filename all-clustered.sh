@@ -5,6 +5,8 @@ cd "$(dirname "$0")"
 
 docker compose -f hive/docker-compose.yml up -d
 
+./wait-for-hive-server.sh
+
 ./download-data.sh
 ./copy-clustered-schema-to-hive-server.sh
 ./copy-clustered-data-to-hive-server.sh
